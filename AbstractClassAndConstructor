@@ -1,0 +1,63 @@
+/**
+ *  Can abstract class Has constructor ? If yes, how one can call the default constructor / Overloaded contructor
+ *  
+ *  Reasons : Why abstract  class has constructor
+ *  
+ *  Purpose of the constructor is to initialize the value of the field if an abstract class has the field.
+ *  Constructor are not used to create the object that is the misconception most of the people have.
+ *  
+ *  (1) you have defined final fields in the abstract class but you did not initialize them in the declaration itself;
+ *   in this case, you MUST have a constructor to initialize these fields
+ *   
+ *   (2) If you want to initialize the abstract class field to some default value for every subclass in that case also 
+ *   We need the abstract class constructor. 
+ *  
+ *  
+ */
+package com.mypractice.github;
+
+public class MyApp1 extends MyAbstractClass
+{
+	public MyApp1() 
+	{
+		super();
+		//super(7,9);
+		System.out.println("MyApp1 default CTOR");
+	}
+	
+	public static void main(String[] args)
+	{
+		MyApp1 ma1 = new MyApp1();
+		ma1.myMethod1();
+		ma1.myMethod2();
+	}
+
+	@Override
+	void myMethod1() {
+		System.out.println("Abstract class method : myMethod1() implementation");
+	}
+}
+
+abstract class MyAbstractClass
+{
+	private int i;
+	private int j;
+	
+	public MyAbstractClass() {
+		System.out.println("Default CTOR of abstract class");
+	}
+	
+	public MyAbstractClass(int i, int j)
+	{
+		this.i = i;
+		this.j = j;
+		System.out.println("Overloaded CTOR of abstract class");
+	}
+	
+	abstract void myMethod1();
+	
+	void myMethod2()
+	{
+		System.out.println("This is concret method myMethod2()");
+	}
+}
