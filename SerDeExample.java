@@ -3,6 +3,7 @@ package com.practice.serde;
 import java.io.Serializable;
 
 /**
+ *  Courtesy : Dugra Software (DURGASOFT)
  *  Variable str, x,y are considered as instance variable.
  *  It also represents the object state.
  *
