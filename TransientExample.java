@@ -3,6 +3,7 @@ package com.practice.serde;
 import java.io.Serializable;
 
 /**
+ *  Courtesy : Dugra Software (DURGASOFT)
  * This class demonstrate the use of transient keyword.
  *  transient is a modifier and it is applicable only to a variable.
  *  One can not apply it to class, method, interface.
