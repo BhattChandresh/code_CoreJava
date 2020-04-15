@@ -15,6 +15,11 @@ public class CircularLinkedListApp {
         System.out.println("Insert 2 Nodes using insertAtLast()");
         list.displayList();
 
+
+        System.out.println("Reversed Linked List");
+        list.reverseLinkedList();
+        list.displayList();
+
         list.deleteLastNode();
         list.deleteLastNode();
         System.out.println("Delete last Node using deleteLast()Node");

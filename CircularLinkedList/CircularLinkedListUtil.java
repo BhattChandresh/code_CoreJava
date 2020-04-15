@@ -68,7 +68,40 @@ public class CircularLinkedListUtil {
         }
         first = first.next;
         temp = null;
+
     }
+
+    public void reverseLinkedList() {
+        System.out.println(last.data);
+        System.out.println(first.data);
+        Node prev = null;
+        Node current = first;
+        Node next = null;
+        while(current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        first = prev;
+        System.out.println(first.data);
+        current = first;
+        while(current != null) {
+            last = current;
+            current = current.next;
+        }
+        System.out.println(last.data);
+
+//        current = first;
+//        while(current != null){
+//            last = current;
+//            current = current.next;
+//        }
+//        System.out.println(last.data);
+
+
+     }
+
 
     public void displayList() {
         System.out.println("list (first ----> last)");
