@@ -5,13 +5,14 @@ import java.util.Map;
 
 public class ChessBoard {
     // Declaration for 8X8 Grid
-    private int[][] grid = new int[8][8];
+    private static int[][] grid = new int[8][8];
     //Identify the cell number a name
-    Map<String,String> cellNumberOutToIn = new HashMap<String,String>();
-    Map<String,String> cellNumberInToOut = new HashMap<String, String>();
+    static Map<String,String> cellNumberOutToIn = new HashMap<String,String>();
+    static Map<String,String> cellNumberInToOut = new HashMap<String, String>();
 
     // Create and Initialize the 8x8 Grid
-    public void initializeChessBoard() {
+    static  {
+        System.out.println("Initializing the Chess Board....");
         String cellRow = "";
         for (int row = 0; row < 8; row++) {
             if (row == 0)
@@ -33,15 +34,12 @@ public class ChessBoard {
             for (int column = 0; column < 8; column++) {
                 grid[row][column] = 0;
                 String input = Integer.toString(row) + Integer.toString(column);
-//                System.out.println(input +  "->" + (cellRow + (column + 1)));
                 cellNumberOutToIn.put((cellRow + (column + 1)),(Integer.toString(row) + Integer.toString(column)));
                 cellNumberInToOut.put(input,(cellRow + (column + 1)));
-//                System.out.println(cellNumberInToOut.get(input));
             }
         }
+        System.out.println("Chess Board initialization completes ....");
     }
-
-
 
     public void getIntersection(String position) {
 
@@ -75,5 +73,6 @@ public class ChessBoard {
                 System.out.print("[" + row + "][" + column + "] : " + cellNumberOutToIn.get(cellRow + (column+1)) + " | "  + (cellRow + (column+1)) + " || ");
              }
         }
+        System.out.println();
     }
 }
