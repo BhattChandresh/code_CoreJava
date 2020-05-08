@@ -19,6 +19,10 @@ public class Movement {
             Rook rook = new Rook();
             rook.findPossibleCellforRook(position);
         }
+        else if(piece.equals("BISHOP")) {
+            Bishop bishop = new Bishop();
+            bishop.findPossibleCellforBishop(position);
+        }
     }
 
     public int getRow(String position) {
@@ -88,7 +92,6 @@ class Rook extends Movement {
         int newX = 0;
         int newY = 0;
         List<String> newPositions = new ArrayList<String>();
-        List<String> validPositions = null;
         int x = getRow(position);
         int y = getColumn(position);
         int[] possiblePositions = {
@@ -118,6 +121,69 @@ class Rook extends Movement {
                 continue;
             newPositions.add(element);
         }
+        outputMessage();
+        for(int i=0;i<newPositions.size();i++) {
+            System.out.println((i+1)  + " -> " + newPositions.get(i) + " -> " + ChessBoard.cellNumberInToOut.get(newPositions.get(i)));
+        }
+    }
+}
+
+class Bishop extends Movement {
+    public void findPossibleCellforBishop(String position) {
+        int newX = 0;
+        int newY = 0;
+        List<String> newPositions = new ArrayList<String>();
+        int x = getRow(position);
+        int y = getColumn(position);
+
+        newX = x;
+        newY = y;
+       while(true) {
+           if (!((newX < 0 || newX > 7) || (newY < 0 || newY > 7))) {
+               newX -= 1;
+               newY +=1;
+               if((newX < 0) || (newY > 7))
+                       break;
+               newPositions.add(getNewPossiblePosition(newX,newY));
+           }
+       }
+
+        newX = x;
+        newY = y;
+        while(true) {
+            if (!((newX < 0 || newX > 7) || (newY < 0 || newY > 7))) {
+                newX += 1;
+                newY -=1;
+                if((newX > 7) || (newY < 0))
+                    break;
+                newPositions.add(getNewPossiblePosition(newX,newY));
+            }
+        }
+
+        newX = x;
+        newY = y;
+        while(true) {
+            if (!((newX < 0 || newX > 7) || (newY < 0 || newY > 7))) {
+                newX += 1;
+                newY +=1;
+                if((newX > 7) || (newY > 7))
+                    break;
+                newPositions.add(getNewPossiblePosition(newX,newY));
+            }
+        }
+
+        newX = x;
+        newY = y;
+        while(true) {
+            if (!((newX < 0 || newX > 7) || (newY < 0 || newY > 7))) {
+                newX -= 1;
+                newY -=1;
+                if((newX < 0) || (newY < 0))
+                    break;
+                newPositions.add(getNewPossiblePosition(newX,newY));
+            }
+        }
+
         outputMessage();
         for(int i=0;i<newPositions.size();i++) {
             System.out.println((i+1)  + " -> " + newPositions.get(i) + " -> " + ChessBoard.cellNumberInToOut.get(newPositions.get(i)));
