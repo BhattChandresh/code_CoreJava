@@ -1,8 +1,5 @@
 package com.technogise.code.interview;
 
-import org.omg.SendingContext.RunTime;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserInput {

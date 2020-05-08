@@ -41,10 +41,6 @@ public class ChessBoard {
         System.out.println("Chess Board initialization completes ....");
     }
 
-    public void getIntersection(String position) {
-
-    }
-
     // For production use this method is not required.
     // This is for testing purpose only.
     public void testInitializationOfChessBoard() {
