@@ -1,0 +1,72 @@
+### Wrong Input testing:
+- Provide below wrong inputs and tested.
+- AIM : Program should display proper error messages and terminated normally.
+(1) rook r5
+(2) pawn 89
+(3) King 4a
+(4) horse bb
+(5) queen 89aa
+(6) bishop P9
+(7) root a3
+(8) bisshop 55939
+(9) Empty String("") Simply press 'Enter Key'
+(10) horseG4
+(11) Queen H9
+(12) King N1
+(13) A1
+(14) Horse A0
+
+### PAWN :
+(1) PaWN a1
+    Can't place pawn from A1 to A8
+(2) pawn H7
+     Can't move further, reach the end of board
+(3) paWn C3
+    All possible positions (cell numbers) are :
+    D3
+(4) PAWN g7
+    All possible positions (cell numbers) are :
+    H7
+(5) PAWN D2
+    All possible positions (cell numbers) are :
+    E2
+
+### KING :
+(1) king C4
+    All possible positions (cell numbers) are :
+    C3 C5 D4 B4 D3 B5 D5 B3
+ (2) KinG f2
+     All possible positions (cell numbers) are :
+     F1 F3 G2 E2 G1 E3 G3 E1
+ (3) king h8
+      All possible positions (cell numbers) are :
+      H7 G8 G7
+ (4) KING d1
+     All possible positions (cell numbers) are :
+     D2 E1 C1 C2 E2
+ (5) kinG F8
+      All possible positions (cell numbers) are :
+      F7 G8 E8 G7 E7
+ (6) kING A1
+     All possible positions (cell numbers) are :
+     A2 B1 B2
+(7) king h3
+    All possible positions (cell numbers) are :
+    H2 H4 G3 G4 G2
+ (8) king a4
+     All possible positions (cell numbers) are :
+     A3 A5 B4 B3 B5
+
+ ### Rook :
+ (1) rooK G1
+     All possible positions (cell numbers) are :
+     G2 G3 G4 G5 G6 G7 G8 H1 F1 E1 D1 C1 B1 A1
+ (2) rook c8
+      All possible positions (cell numbers) are :
+      C1 C2 C3 C4 C5 C6 C7 H8 G8 F8 E8 D8 B8 A8
+ (3) Rook D5
+     All possible positions (cell numbers) are :
+     D1 D2 D3 D4 D6 D7 D8 H5 G5 F5 E5 C5 B5 A5
+ (4) rOOk h6
+     All possible positions (cell numbers) are :
+     H1 H2 H3 H4 H5 H7 H8 G6 F6 E6 D6 C6 B6 A6
