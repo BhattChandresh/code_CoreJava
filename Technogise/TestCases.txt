@@ -16,6 +16,8 @@
 (13) A1
 (14) Horse A0
 
+Position Test Cases:
+
 ### PAWN :
 (1) PaWN a1
     Can't place pawn from A1 to A8
