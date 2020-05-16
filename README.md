@@ -1,8 +1,8 @@
 # code_CoreJava
-This repository contains my Java code learning.
+This repository contains my Java learning joureny.
 It consist of below artifacts :
-  - My Hobby projects
-  - My learing
-  - My Practice programs
-  - Problems faced during actual development
-  - Problems faced during interview
+  - My Hobby projects.
+  - My Java Learing.
+  - Practice programs
+  - Problems faced during actual development.
+  - Coding problems given during coding interview.
